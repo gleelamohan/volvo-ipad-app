@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en" style="background-color:white;">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, shrink-to-fit=no"
+		/>
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="/assets/styles/salesforce-lightning-design-system.css"
+		/>
+
+		<title>MQ</title>
+	</head>
+	<body >
+		<div id="modal"  style="display:none;" >
+		<section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+			<div style="margin: 0 auto;margin:100px;">
+			<header class="slds-modal__header">
+			<button id="close" class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close">
+			<svg class="slds-button__icon slds-button__icon_large" aria-hidden="true">
+			<use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
+			</svg>
+			<span class="slds-assistive-text">Close</span>
+			</button>
+			<h2 id="modal-heading-01" class="slds-modal__title slds-hyphenate">Mulesoft Configuration</h2>
+			</header>
+			<div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+				<table class="slds-table slds-table_cell-buffer slds-table_bordered">
+					<thead>
+					<tr class="slds-line-height_reset">
+						<th class="" scope="col" style="width:3.75rem">
+							<div class="slds-truncate slds-assistive-text" title="SNo">#</div>
+						</th>
+					<th class="" scope="col">
+					<div class="slds-truncate" title="Opportunity Name">Mulesoft Configuration Name</div>
+					</th>
+					<th class="" scope="col">
+					<div class="slds-truncate" title="Account Name">Value</div>
+					</th>
+			
+					</tr>
+					</thead>
+					<tbody>
+					<tr class="slds-hint-parent">
+					<th data-label="Opportunity Name" scope="row">
+					<div class="slds-truncate" title="Cloudhub">
+					<a href="javascript:void(0);" tabindex="-1">1</a>
+					</div>
+					</th>
+					<td data-label="Account Name">
+					<div class="slds-truncate" title="Cloudhub">URL</div>
+					</td>
+					<td data-label="Close Date">
+					<div class="slds-truncate" title="4/14/2015" id="url"></div>
+					</td>
+				
+					</tr>
+					<tr class="slds-hint-parent">
+					<th data-label="Opportunity Name" scope="row">
+					<div class="slds-truncate" title="Cloudhub + Anypoint Connectors">
+					<a href="javascript:void(0);" tabindex="-1">2</a>
+					</div>
+					</th>
+					<td data-label="Account Name">
+					<div class="slds-truncate" title="Cloudhub">username</div>
+					</td>
+					<td data-label="Close Date">
+					<div class="slds-truncate" title="4/14/2015" id="username"></div>
+					</td>
+				
+					</tr>
+					<tr class="slds-hint-parent">
+						<th data-label="Opportunity Name" scope="row">
+						<div class="slds-truncate" title="Cloudhub + Anypoint Connectors">
+						<a href="javascript:void(0);" tabindex="-1">3</a>
+						</div>
+						</th>
+						<td data-label="Account Name">
+						<div class="slds-truncate" title="Cloudhub">password</div>
+						</td>
+						<td data-label="Close Date">
+						<div class="slds-truncate" title="4/14/2015"><span id="password"> </span></div>
+						</td>
+					
+						</tr>
+					<tr class="slds-hint-parent">
+						<th data-label="Opportunity Name" scope="row">
+						<div class="slds-truncate" title="Cloudhub + Anypoint Connectors">
+						<a href="javascript:void(0);" tabindex="-1">4</a>
+						</div>
+						</th>
+						<td data-label="Account Name">
+						<div class="slds-truncate" title="Cloudhub">Host Name</div>
+						</td>
+						<td data-label="Close Date">
+						<div class="slds-truncate" title="4/14/2015"> owl.rmq.cloudamqp.com</div>
+						</td>
+					
+						</tr>
+						<tr class="slds-hint-parent">
+							<th data-label="Opportunity Name" scope="row">
+							<div class="slds-truncate" title="Cloudhub + Anypoint Connectors">
+							<a href="javascript:void(0);" tabindex="-1">5</a>
+							</div>
+							</th>
+							<td data-label="Account Name">
+							<div class="slds-truncate" title="Cloudhub">Port</div>
+							</td>
+							<td data-label="Close Date">
+							<div class="slds-truncate" title="4/14/2015">5672</div>
+							</td>
+						
+							</tr>
+					</tbody>
+					</table>
+			</div>
+			</div>
+			</section>
+			<div class="slds-backdrop slds-backdrop_open"></div>
+		</div>
+		<div class="slds-grid slds-wrap">
+			<nav class="slds-col slds-size_1-of-1">
+				<div class="slds-page-header">
+					<div class="slds-page-header__row">
+						<div class="slds-page-header__col-title">
+							<div class="slds-media">
+								<div class="slds-media__figure">
+									<span
+										class="slds-icon_container slds-icon-standard-opportunity"
+										title="opportunity"
+									>
+										<svg
+											class="slds-icon slds-page-header__icon"
+											aria-hidden="true"
+
+										>
+											<use
+												xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#opportunity"
+											></use>
+										</svg>
+										<span class="slds-assistive-text"
+											>Orders Portal</span
+										>
+									</span>
+								</div>
+								<div class="slds-media__body">
+									<div class="slds-page-header__name">
+										<div class="slds-page-header__name-title">
+											<h1>
+												<span
+													class="slds-page-header__title slds-truncate"
+													title="Rohde Corp - 80,000 Widgets"
+													>Orders Portal</span
+												>
+											</h1>
+
+										</div>
+										
+									</div>
+									<p class="slds-page-header__name-meta">
+										Order that are waiting to be dispatched
+									</p>
+								</div>
+								<button style="float:right;" class="slds-button slds-button_brand" id="configuration">Show Configuration</button>
+
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</nav>
+			<main class="slds-col slds-size_1-of-1">
+			<!--	<article class="slds-card">
+					<div class="slds-form-element" style="padding:50px 200px 50px 200px;">
+						<label class="slds-form-element__label" for="form-element-01"
+							>Send Message to Message Queue</label
+						>
+						<div class="slds-form-element__control">
+							<input
+								type="text"
+								id="messagebox"
+								placeholder="Enter message to send"
+								class="slds-input"
+							/>
+							<div style="padding: 10px; text-align: center;">
+								<button
+									class="slds-button slds-button_brand"
+                  style="width: 200px;" 
+                  id="send"
+								>
+									Send
+								</button>
+							</div>
+						</div>
+					</div>
+				</article>-->
+			</main>
+
+			<nav class="slds-col slds-size_1-of-1" style="padding:20px;">
+			<!--	<div class="slds-box" style="background-color:white;" id="ordercontainer">
+				
+				</div>-->
+	
+
+				<ul class="slds-accordion" id="accordian">
+
+
+				</ul>
+		
+			</nav>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="/assets/scripts/index.js" ></script>
+	</body>
+</html>
+
+
+<apex:page docType="html-5.0" applyHtmlTag="false" applyBodyTag="false"
+           showHeader="false" sidebar="false" standardStylesheets="false"
+           title="Unused Title">
+
+</apex:page>
