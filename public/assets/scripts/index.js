@@ -39,6 +39,11 @@ function setTime() {
  $('#seconds').html( pad(totalSeconds % 60));
  $('#minutes').html( pad(parseInt(totalSeconds / 60)));
 	}
+
+	else{
+		$("#drivercoach").css("display","none");
+		$("#drivercoach_toggle").css("display","block");
+	}
 }
 
 
