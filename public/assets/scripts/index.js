@@ -55,7 +55,24 @@ $(document).ready(function () {
 					str = str+	`</div>
 
 
-				</div>
+				</div>`;
+
+				if(data.Friends.length >0){
+				str = str+	`
+
+
+				<section style=" width: 14rem;" aria-label="Dialog title" aria-describedby="popover-body-id" class="slds-popover slds-nubbin_top" role="dialog">
+
+<div id="popover-body-id" class="slds-popover__body" style="height: 50px;color: black;
+font-size: 16px;
+text-align: center;
+padding-top: 12px;">
+<p>${data.Friends.join(' ')}</p>
+</div>
+</section>`
+				}
+
+str = str+ `
 			</div>`;
 
 			})
@@ -86,7 +103,7 @@ $("#stations").append(str);
 
 
 
-var totalSeconds =1140;
+var totalSeconds =1200;
 
 function pad(val) {
   var valString = val + "";
