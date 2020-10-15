@@ -14,15 +14,41 @@ $(document).ready(function () {
 				console.log(data);
 
 				str = str+	`<div class="slds-size_1-of-3" >
-				<div class="slds-box slds-box_x-small slds-text-align_center slds-m-around_x-small" style="    height: 180px;padding-top: 40px;background-color:white;color:black;">
+				<div class="slds-box slds-box_x-small slds-text-align_center slds-m-around_x-small" style="    height: 180px;background-color:white;color:black;">
 				<div style="font-size:14px;">${data.Name}</div>
 				<div  style="font-size:10px;">Kilometers: 7km</div>
 				<div  style="font-size:10px;">Time:4min</div>
-				<div style="height:50px;background-color:#899964;margin-top:30px;text-align:center;">
-					<img src="/assets/images/fuel.svg" style="height: 20px;filter:invert();width: 20px;margin-left:2px;margin-top:5px;" />
-					<img src="/assets/images/toilet.svg" style="height: 20px;filter:invert();width: 20px;margin-left:8px;margin-top:5px;" />
-					
+				<div><img src="/assets/images/map.jpg" style="height:50px;width:50px;" /><br/>
+				<div  style="font-size:10px;">${data.Location}</div>
 				</div>
+				<div style="height:50px;background-color:#899964;text-align:center;">`
+
+				$.each(data.Equipment, function(i,row){
+
+					if(row.Type == 'refuseBin'){
+						str = str + `<img src="/assets/images/recycle.png" style="height: 30px;filter:invert();width: 30px;margin-left:2px;margin-top:5px;" />`;
+					}
+
+					if(row.Type == 'toilet'){
+						str = str + 	`<img src="/assets/images/toilet.svg" style="height: 30px;filter:invert();width: 30px;margin-left:8px;margin-top:5px;" />`;
+					}
+
+					if(row.Type == 'picnicFacilities'){
+						str = str + 	`<img src="/assets/images/picnic.png" style="height: 30px;filter:invert();width: 30px;margin-left:8px;margin-top:5px;" />`;
+					}
+						if(row.Type == 'Gasstation'){
+						str = str + 	`<img src="/assets/images/fuel.svg" style="height: 30px;filter:invert();width: 30px;margin-left:8px;margin-top:5px;" />`;
+					}
+
+					if(row.Type == 'restaurant'){
+						str = str + 	`<img src="/assets/images/food.png" style="height: 30px;filter:invert();width: 3chec0px;margin-left:8px;margin-top:5px;" />`;
+					}
+				
+				});
+
+					str = str+	`</div>
+
+
 				</div>
 			</div>`;
 
@@ -54,7 +80,7 @@ $("#stations").append(str);
 
 
 
-var totalSeconds =1140;
+var totalSeconds =1200;
 
 function pad(val) {
   var valString = val + "";
