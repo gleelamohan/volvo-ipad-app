@@ -2,6 +2,40 @@
 
 $(document).ready(function () {
 
+	$.ajax({
+		url: "https://neidenmark-nodered.herokuapp.com/api/VolvoTruck/restArea/Search",
+		cache: false,
+		success: function(result){
+
+			let str = '';
+
+			$.each(result, function(i,data){
+
+				console.log(data);
+
+				str = str+	`<div class="slds-size_1-of-3" >
+				<div class="slds-box slds-box_x-small slds-text-align_center slds-m-around_x-small" style="    height: 180px;padding-top: 40px;background-color:white;color:black;">
+				<div style="font-size:14px;">${data.Name}</div>
+				<div  style="font-size:10px;">Kilometers: 7km</div>
+				<div  style="font-size:10px;">Time:4min</div>
+				<div style="height:50px;background-color:#899964;margin-top:30px;text-align:center;">
+					<img src="/assets/images/fuel.svg" style="height: 20px;filter:invert();width: 20px;margin-left:2px;margin-top:5px;" />
+					<img src="/assets/images/toilet.svg" style="height: 20px;filter:invert();width: 20px;margin-left:8px;margin-top:5px;" />
+					
+				</div>
+				</div>
+			</div>`;
+
+			})
+			
+		 
+$("#stations").append(str);
+
+			
+		}
+	});
+
+
 	function startTime() {
 		var today = new Date();
 		var h = today.getHours();
@@ -35,7 +69,7 @@ function setTime() {
 
 	if(totalSeconds <= 1200)
 	{
-	console.log(totalSeconds);
+	
  $('#seconds').html( pad(totalSeconds % 60));
  $('#minutes').html( pad(parseInt(totalSeconds / 60)));
 	}
