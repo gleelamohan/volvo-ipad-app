@@ -80,7 +80,7 @@ $("#stations").append(str);
 
 
 
-var totalSeconds =1200;
+var totalSeconds =1140;
 
 function pad(val) {
   var valString = val + "";
