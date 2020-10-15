@@ -23,6 +23,7 @@ $(document).ready(function () {
 				</div>
 				<div style="height:50px;background-color:#899964;text-align:center;">`
 
+
 				$.each(data.Equipment, function(i,row){
 
 					if(row.Type == 'refuseBin'){
@@ -45,6 +46,11 @@ $(document).ready(function () {
 					}
 				
 				});
+
+				if(data.Friends.length >0){
+					str = str + 	`<img src="/assets/images/friends.svg" style="height: 30px;filter:invert();width: 3chec0px;margin-left:8px;margin-top:5px;" />`;
+
+				}
 
 					str = str+	`</div>
 
